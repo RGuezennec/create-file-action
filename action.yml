@@ -1,0 +1,17 @@
+name: 'Create File'
+description: 'Create a file with given content'
+inputs:
+  file_content:  # id of input
+    description: 'file content'
+    required: true
+    default: ''
+  file_path:
+    description: 'File path'
+    required: true
+    default: ''
+runs:
+  using: "composite"
+  steps:
+    - run: echo ${{ inputs.file_content }} > ${{ inputs.file_path }}
+      shell: bash
+
