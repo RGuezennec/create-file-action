@@ -12,6 +12,6 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: echo ${{ inputs.file_content }} > ${{ inputs.file_path }}
+    - run: echo "${{ inputs.file_content }}" > ${{ inputs.file_path }}
       shell: bash
 
